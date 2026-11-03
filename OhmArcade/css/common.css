@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box
+}
+
+:root {
+    color-scheme: dark;
+    --bg: #061321;
+    --panel: #0d2034;
+    --line: #24435f;
+    --text: #edf6ff;
+    --muted: #91abc4;
+    --blue: #176b9e;
+    --cyan: #54c9dc;
+    --gold: #ffdf70
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--text);
+    background: radial-gradient(ellipse at 50% 20%, #12334d 0%, var(--bg) 68%);
+    font-family: Arial, Helvetica, sans-serif
+}
+
+button,
+input {
+    font: inherit
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent
+}
+
+a {
+    color: inherit
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--cyan);
+    outline-offset: 3px
+}
+
+.install-button {
+    min-height: 38px;
+    padding: 0 13px;
+    border: 1px solid #367da3;
+    border-radius: 10px;
+    color: #eaf7ff;
+    background: linear-gradient(110deg, #176b9e, #10436f);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .4px;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.install-button:hover {
+    filter: brightness(1.18)
+}
+
+.install-button:disabled {
+    opacity: .55;
+    cursor: default
+}

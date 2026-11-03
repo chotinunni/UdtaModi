@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#071525" />
+    <link rel="manifest" href="../../manifest.json" />
+    <link rel="icon" href="../../assets/app-icon-192.png" />
+    <title>Udta Modi - Ohm Arcade</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="game-topbar">
+      <a class="game-brand" href="../../Index.html"
+        >←
+        <img id="logoBird" src="images/bird.png" alt="" />
+      </a>
+      <div class="difficulty-group" aria-label="Difficulty">
+        <button class="difficulty-button" data-level="easy">EASY</button>
+        <button class="difficulty-button" data-level="medium">MEDIUM</button>
+        <button class="difficulty-button" data-level="hard">HARD</button>
+      </div>
+      <label class="name-label"
+        >NAME
+        <input
+          id="playerName"
+          maxlength="16"
+          placeholder="Your name"
+          autocomplete="nickname"
+      /></label>
+      <button
+        class="install-button game-install-button"
+        id="installAppButton"
+        type="button"
+      >
+        ⬇ INSTALL APP
+      </button>
+      <button class="top-button" id="leaderboardOpen" aria-label="Leaderboard">
+        🏆
+      </button>
+      <button class="top-button" id="soundButton" aria-label="Toggle sound">
+        🔊
+      </button>
+      <button class="top-button" id="menuOpen" aria-label="Open menu">
+        ☰
+      </button>
+    </header>
+    <main class="game-page">
+      <section class="game-frame">
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        <div class="game-hud">
+          <span id="modeLabel">EASY MODE</span><strong id="scoreText">0</strong>
+        </div>
+        <div class="overlay" id="startOverlay">
+          <div class="dialog">
+            <h1><span>Udta</span> Modi</h1>
+            <p>Tap, click or press Space to start</p>
+            <button class="primary-button" id="startButton">START GAME</button>
+          </div>
+        </div>
+        <div class="overlay hidden" id="gameOverOverlay">
+          <div class="dialog">
+            <p class="eyebrow">FLIGHT FINISHED</p>
+            <h1>GAME OVER</h1>
+            <h2 id="finalScore">Score: 0</h2>
+            <p id="gameOverBest">Personal Best: 0</p>
+            <p id="gameOverDifficulty">Difficulty: HARD</p>
+            <p id="recordMessage"></p>
+            <button class="primary-button" id="restartButton">
+              PLAY AGAIN
+            </button>
+            <a href="https://udtamodi.netlify.app/">
+              <button class="secondary-button" id="homeButton">
+                BACK TO ARCADE
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+      <footer class="game-footer">
+        <a href="../../Index.html">← Back to Ohm Arcade</a
+        ><span>Space · Click · Tap to fly</span>
+      </footer>
+    </main>
+
+    <div class="modal hidden" id="leaderboardModal">
+      <section class="modal-card">
+        <h2>🏆 TOP 3 SCORES</h2>
+        <ol id="leaderboardList" class="leaderboard-list"></ol>
+        <p id="emptyLeaderboard">No scores yet. Be the first!</p>
+        <button class="secondary-button" data-close>CLOSE</button>
+      </section>
+    </div>
+    <div class="modal hidden" id="statsModal">
+      <section class="modal-card">
+        <h2>MY STATS</h2>
+        <div class="stat-row">
+          <span>Games played</span><strong id="gamesPlayed">0</strong>
+        </div>
+        <div class="stat-row">
+          <span>Personal best</span><strong id="personalBest">0</strong>
+        </div>
+        <div class="stat-row">
+          <span>Selected difficulty</span
+          ><strong id="statsDifficulty">EASY</strong>
+        </div>
+        <button class="secondary-button" data-close>CLOSE</button>
+      </section>
+    </div>
+    <div class="modal hidden" id="menuModal">
+      <section class="modal-card menu-card">
+        <p class="eyebrow">Udta Modi ARCADE</p>
+        <h2>GAME MENU</h2>
+        <button class="menu-option" id="menuLeaderboard">
+          🏆 <span>LEADERBOARD</span><b>›</b>
+        </button>
+        <button class="menu-option" id="menuStats">
+          📊 <span>MY STATS</span><b>›</b>
+        </button>
+        <button class="menu-option" id="menuHome">
+          🏠 <span>BACK TO ARCADE</span><b>›</b>
+        </button>
+        <button class="secondary-button" data-close>✕ CLOSE</button>
+      </section>
+    </div>
+
+    <audio id="crashSound" preload="auto" src="sounds/crash.mp3"></audio>
+    <audio id="pipePassSound" preload="auto" src="sounds/pipe-pass.mp3"></audio>
+    <audio
+      id="milestoneSound1"
+      preload="auto"
+      src="sounds/milestone-1.mp3"
+    ></audio>
+    <audio
+      id="milestoneSound2"
+      preload="auto"
+      src="sounds/milestone-2.mp3"
+    ></audio>
+    <audio
+      id="milestoneSound3"
+      preload="auto"
+      src="sounds/milestone-3.mp3"
+    ></audio>
+    <audio
+      id="backgroundMusic"
+      preload="auto"
+      loop
+      src="sounds/background.mp3"
+    ></audio>
+    <script src="../../js/install.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>

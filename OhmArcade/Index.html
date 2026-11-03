@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#071525" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="assets/app-icon-192.png" />
+    <title>Ohm Arcade</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="Index.html"
+        ><span class="brand-mark">🎮</span
+        ><span
+          ><strong>Ohm Arcade</strong><small>BROWSER ARCADE</small></span
+        ></a
+      >
+      <nav class="header-nav">
+        <a href="#games">GAMES</a><a href="#about">ABOUT</a
+        ><button class="install-button" type="button">
+          <a href="https://t.me/lU1eDIvYkkM1NDBl">⬇ INSTALL APP</a>
+        </button>
+      </nav>
+    </header>
+    <main class="home-main">
+      <section class="hero">
+        <p class="eyebrow">WELCOME TO YOUR ARCADE</p>
+        <h1>Choose your <span>next game.</span></h1>
+        <p class="hero-copy">
+          A growing collection of games. Pick one and start playing.
+        </p>
+      </section>
+      <section id="games" class="games-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE COLLECTION</p>
+            <h2>All Games</h2>
+          </div>
+          <span class="game-count" id="gameCount">1 GAME</span>
+        </div>
+        <div class="game-grid">
+          <article class="game-card">
+            <div class="game-art flappy-art">
+              <span>
+                <img src="games/FlappyBird/images/birdlogo.png" alt="">
+              <!-- </span><b>▰ ▰</b> -->
+            </div>
+            <div class="game-card-content">
+              <div class="card-title-row">
+                <h3>Udta Modi</h3>
+                <span class="status-pill available">PLAYABLE</span>
+              </div>
+              <p>
+                Fly through the pipes, collect points and reach the leaderboard.
+              </p>
+              <a class="play-button" href="games/FlappyBird/Index.html"
+                >PLAY GAME <span>→</span></a
+              >
+            </div>
+          </article>
+          <article class="game-card coming-card">
+            <div class="game-art platform-art"><span>🏃</span></div>
+            <div class="game-card-content">
+              <div class="card-title-row">
+                <h3>Platform Game</h3>
+                <span class="status-pill soon">COMING SOON</span>
+              </div>
+              <p>A new adventure is being prepared.</p>
+              <button class="play-button disabled" disabled>COMING SOON</button>
+            </div>
+          </article>
+          <article class="game-card coming-card">
+            <div class="game-art racing-art"><span>🏎️</span></div>
+            <div class="game-card-content">
+              <div class="card-title-row">
+                <h3>Racing Game</h3>
+                <span class="status-pill soon">COMING SOON</span>
+              </div>
+              <p>Race against the clock in a future arcade challenge.</p>
+              <button class="play-button disabled" disabled>COMING SOON</button>
+            </div>
+          </article>
+          <article class="game-card coming-card">
+            <div class="game-art space-art"><span>🚀</span></div>
+            <div class="game-card-content">
+              <div class="card-title-row">
+                <h3>Space Shooter</h3>
+                <span class="status-pill soon">COMING SOON</span>
+              </div>
+              <p>Defend the galaxy in another upcoming game.</p>
+              <button class="play-button disabled" disabled>COMING SOON</button>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="about" class="about-section">
+        <p class="eyebrow">ABOUT THE ARCADE</p>
+        <h2>One home. Many games.</h2>
+        <p>
+          Each game lives in its own folder, so it can be updated independently
+          while this homepage stays the same.
+        </p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>© <span id="year"></span> Ohm Arcade</span
+      ><span>Made for fun · More games coming</span>
+    </footer>
+    <script src="js/install.js"></script>
+    <script src="js/homepage.js"></script>
+  </body>
+</html>
